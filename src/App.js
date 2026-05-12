@@ -86,37 +86,95 @@ const App = () => {
 
   const fetchDoctors = async () => {
     try {
+      console.log('🔄 Fetching doctors from:', `${API_URL}/doctors`);
       const response = await fetch(`${API_URL}/doctors`);
+      
+      if (!response.ok) {
+        console.error('❌ API Error:', response.status);
+        return;
+      }
+      
       const data = await response.json();
-      const doctorsList = Array.isArray(data) ? data : data.data || [];
+      console.log('📦 API Response:', data);
+      
+      // Parse response - API returns {data: [...], message: "...", status: 200}
+      let doctorsList = [];
+      
+      if (Array.isArray(data)) {
+        doctorsList = data;
+      } else if (data && data.data && Array.isArray(data.data)) {
+        doctorsList = data.data;
+      } else if (data && Array.isArray(data)) {
+        doctorsList = data;
+      }
+      
+      console.log('✅ Parsed doctors:', doctorsList);
       setDoctors(doctorsList);
-      console.log('Doctors loaded:', doctorsList);
     } catch (err) {
-      console.error('Error fetching doctors:', err);
+      console.error('❌ Error fetching doctors:', err);
+      setDoctors([]);
     }
   };
 
   const fetchAppointments = async () => {
     try {
+      console.log('🔄 Fetching appointments from:', `${API_URL}/appointments`);
       const response = await fetch(`${API_URL}/appointments`);
+      
+      if (!response.ok) {
+        console.error('❌ API Error:', response.status);
+        return;
+      }
+      
       const data = await response.json();
-      const appointmentsList = Array.isArray(data) ? data : data.data || [];
+      console.log('📦 Appointments API Response:', data);
+      
+      let appointmentsList = [];
+      
+      if (Array.isArray(data)) {
+        appointmentsList = data;
+      } else if (data && data.data && Array.isArray(data.data)) {
+        appointmentsList = data.data;
+      } else if (data && Array.isArray(data)) {
+        appointmentsList = data;
+      }
+      
+      console.log('✅ Parsed appointments:', appointmentsList);
       setAppointments(appointmentsList);
-      console.log('Appointments loaded:', appointmentsList);
     } catch (err) {
-      console.error('Error fetching appointments:', err);
+      console.error('❌ Error fetching appointments:', err);
+      setAppointments([]);
     }
   };
 
   const fetchPatients = async () => {
     try {
+      console.log('🔄 Fetching patients from:', `${API_URL}/patients`);
       const response = await fetch(`${API_URL}/patients`);
+      
+      if (!response.ok) {
+        console.error('❌ API Error:', response.status);
+        return;
+      }
+      
       const data = await response.json();
-      const patientsList = Array.isArray(data) ? data : data.data || [];
+      console.log('📦 Patients API Response:', data);
+      
+      let patientsList = [];
+      
+      if (Array.isArray(data)) {
+        patientsList = data;
+      } else if (data && data.data && Array.isArray(data.data)) {
+        patientsList = data.data;
+      } else if (data && Array.isArray(data)) {
+        patientsList = data;
+      }
+      
+      console.log('✅ Parsed patients:', patientsList);
       setPatients(patientsList);
-      console.log('Patients loaded:', patientsList);
     } catch (err) {
-      console.error('Error fetching patients:', err);
+      console.error('❌ Error fetching patients:', err);
+      setPatients([]);
     }
   };
 
