@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+ 🏥Qwen Hospital Management System
+A full-stack Hospital Management System built with React.js (Frontend) and Spring Boot (Backend), designed to manage patients, doctors, appointments, and billing efficiently.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🖥️ Live Preview
 
-## Available Scripts
+Run locally at: http://localhost:3000
 
-In the project directory, you can run:
 
-### `npm start`
+✨ Features
+👨‍💼 Admin Role
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+📊 Dashboard — View total patients, doctors, appointments with recent activity
+👥 Patients — Add, edit, delete patient records
+⚕️ Doctors — View all doctors and their specializations
+📅 Appointments — Book, edit, delete appointments with real-time database sync
+💳 Billing — Create invoices, mark as paid, download color PDF bills
+⚙️ Profile — View and edit admin profile
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+👨‍⚕️ Doctor Role
 
-### `npm test`
+👨‍⚕️ My Patients — View assigned patients
+⚕️ Doctors — View all doctors
+⚙️ Profile — View and edit doctor profile
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+🛠️ Tech Stack
+LayerTechnologyFrontendReact.jsBackendSpring Boot (Java)DatabasePostgreSQLStylingInline CSS (React)StateReact useState / useRefStoragelocalStorage + REST API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📁 Project Structure
+hospital-app/
+├── frontend/                  # React.js Frontend
+│   ├── public/
+│   └── src/
+│       ├── App.js             # Main app with routing
+│       └── components/
+│           ├── LoginPage.js
+│           ├── WelcomePage.js
+│           ├── Sidebar.js
+│           ├── Dashboard.js
+│           ├── Appointments.js
+│           ├── Doctors.js
+│           ├── Patients.js
+│           ├── Billing.js
+│           ├── Profile.js
+│           └── MyPatients.js
+│
+└── backend/                   # Spring Boot Backend
+    └── src/main/java/com/project/hospital/
+        ├── controller/
+        ├── service/
+        ├── repository/
+        ├── entity/
+        └── dto/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🚀 Getting Started
+Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+📝 License
+This project is licensed under the MIT License.
 
-### `npm run eject`
+👨‍💻 Developer
+Developed with ❤️ by Tamilarasan.V
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Built as a full-stack project using React.js + Spring Boot + PostgreSQL
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+⭐ If you found this project helpful, please give it a star! ⭐ShareProject contenthospitalCreated by youAdd PDFs, documents, or other text to reference in this project.Contenterror.txttxtCompiled with problems:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Node.js (v16+)
+Java JDK 17+
+PostgreSQL
+Maven
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
