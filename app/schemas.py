@@ -708,14 +708,13 @@ class CreateBillWithItemsDTO(BaseModel):
     lines: List[BillLineDTO]
 
 class PublicBookDTO(BaseModel):
-        name: str = Field(..., min_length=2, max_length=120, pattern=r"^[^<>]+$")
-email: EmailStr
-phone: str = Field(..., min_length=6, max_length=20, pattern=r"^[0-9+\- ]+$")
-date_of_birth: date
-gender: str = Field(..., pattern=r"^(Male|Female|Other)$")
-doctor_id: int
-appointment_date_time: datetime
-reason: str = Field(..., min_length=2, max_length=500, pattern=r"^[^<>]+$")
-
+    name: str = Field(..., min_length=2, max_length=120, pattern=r"^[^<>]+$")
+    email: EmailStr
+    phone: str = Field(..., min_length=6, max_length=20, pattern=r"^[0-9+\- ]+$")
+    date_of_birth: date
+    gender: str = Field(..., pattern=r"^(Male|Female|Other)$")
+    doctor_id: int
+    appointment_date_time: datetime
+    reason: str = Field(..., min_length=2, max_length=500, pattern=r"^[^<>]+$")
 
 
