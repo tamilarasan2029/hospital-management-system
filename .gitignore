@@ -66,6 +66,7 @@ __pycache__/
 uploads/
 .idea/
 database/*.sql
+!database/schema.sql
 
 
 
